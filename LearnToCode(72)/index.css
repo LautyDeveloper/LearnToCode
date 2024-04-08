@@ -1,0 +1,826 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Variables */
+:root {
+  --violetaPrincipal: #3c1a62;
+  --violetaSecundario: #cc9eff;
+  --violetaSecundarioSecundario: #8651c0;
+  --violetaOscuro: #1d003e;
+  --violetaInput: #7800ff;
+  --backgroundPrincipal: #dcdcdc;
+}
+
+/* Salvavidas */
+.oculto {
+  display: none;
+}
+a {
+  text-decoration: none !important;
+}
+
+/* Seccion Header */
+header {
+  max-width: 100vw;
+  height: 13vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--violetaPrincipal);
+}
+header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+header .content .logo {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  height: 100%;
+  align-items: center;
+}
+header .content .logo .imagen {
+  width: 30%;
+  height: 100%;
+  background-image: url("logoltc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header .content .logo h1 {
+  color: var(--violetaSecundario);
+}
+header .content nav {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .content nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+header .content nav ul li a {
+  font-size: 1.4rem;
+  color: white;
+  transition: all ease 0.2s;
+}
+header .content nav ul li a:hover {
+  font-size: 1.4rem;
+  color: var(--violetaSecundario);
+}
+
+/* Seccion Hero */
+#hero {
+  height: 100vh;
+  max-width: 100vw;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+#hero .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  position: relative;
+  z-index: 23;
+}
+#hero .texto h2 {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 5%;
+  font-weight: 700;
+}
+#hero .texto a {
+  background-color: var(--violetaPrincipal);
+  color: white;
+  width: 20%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 20px;
+}
+#hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#hero .capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1c1c1d;
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+}
+
+/* Seccion Curso HTML */
+#html {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundPrincipal);
+  height: 50vh;
+  padding: 0 0;
+  max-width: 100vw;
+  gap: 5%;
+}
+#html .card {
+  background: rgb(29, 0, 62);
+  background: linear-gradient(
+    180deg,
+    rgba(29, 0, 62, 1) 16%,
+    rgba(134, 81, 192, 1) 100%
+  );
+  height: 250px;
+  max-width: 45%;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+#html .card .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#html .card .content .texto {
+  padding-left: 20px;
+  height: 75%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#html .card .content .texto h2 {
+  background: linear-gradient(#cc9eff, #8651c0);
+  color: transparent;
+  background-clip: text;
+}
+#html .card .content .texto p {
+  color: white;
+  font-size: 1.2rem;
+}
+#html .card .content .texto a {
+  background-color: var(--violetaPrincipal);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  width: 90%;
+  height: 35px;
+  border-radius: 10px;
+}
+#html .card .content .imagen {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("htmlback.jpeg");
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#html .card .content .imagen img {
+  width: 40%;
+  height: 70%;
+  object-fit: cover;
+}
+#html .card .content .imagen a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.3s all ease-in;
+}
+#html .card .content .imagen a:hover {
+  color: var(--violetaSecundario);
+}
+#html .botones {
+  width: 40%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#html .botones .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#html .botones .content a {
+  color: white;
+  background-color: var(--violetaPrincipal);
+  text-decoration: none;
+  padding: 10px 80px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#html .botones .content a:hover {
+  background-color: transparent;
+  color: var(--violetaPrincipal);
+  border: 2px solid var(--violetaPrincipal);
+  transition: all 0.3s ease-in;
+}
+#html .botones .content .distinto {
+  background-color: transparent;
+  color: var(--violetaPrincipal);
+  border: 2px solid var(--violetaPrincipal);
+  transition: all 0.3s ease-in;
+}
+#html .botones .content .distinto:hover {
+  background-color: var(--violetaPrincipal);
+  border: none;
+  color: white;
+}
+
+/* Seccion Curso CSS */
+#css {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundPrincipal);
+  height: 50vh;
+  max-width: 100vw;
+  padding: 0 0;
+  gap: 5%;
+}
+#css .card {
+  background: rgb(29, 0, 62);
+  background: linear-gradient(
+    180deg,
+    rgba(29, 0, 62, 1) 16%,
+    rgba(134, 81, 192, 1) 100%
+  );
+  height: 250px;
+  max-width: 45%;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+#css .card .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#css .card .content .texto {
+  padding-left: 20px;
+  height: 75%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#css .card .content .texto h2 {
+  background: linear-gradient(#cc9eff, #8651c0);
+  color: transparent;
+  background-clip: text;
+}
+#css .card .content .texto p {
+  color: white;
+  font-size: 1.2rem;
+}
+#css .card .content .texto a {
+  background-color: var(--violetaPrincipal);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  width: 90%;
+  height: 35px;
+  border-radius: 10px;
+}
+#css .card .content .imagen {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("htmlback.jpeg");
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#css .card .content .imagen img {
+  width: 40%;
+  height: 70%;
+  object-fit: cover;
+}
+#css .card .content .imagen a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.3s all ease-in;
+}
+#css .card .content .imagen a:hover {
+  color: var(--violetaSecundario);
+}
+#css .botones {
+  width: 40%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#css .botones .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#css .botones .content a {
+  color: white;
+  background-color: var(--violetaPrincipal);
+  text-decoration: none;
+  padding: 10px 80px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#css .botones .content a:hover {
+  background-color: transparent;
+  color: var(--violetaPrincipal);
+  border: 2px solid var(--violetaPrincipal);
+  transition: all 0.3s ease-in;
+}
+#css .botones .content .distinto {
+  background-color: transparent;
+  color: var(--violetaPrincipal);
+  border: 2px solid var(--violetaPrincipal);
+  transition: all 0.3s ease-in;
+}
+#css .botones .content .distinto:hover {
+  background-color: var(--violetaPrincipal);
+  border: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #html {
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    .card {
+      height: auto;
+      margin: 1%;
+      .content {
+        flex-direction: column-reverse;
+        .imagen {
+          width: 100%;
+          height: 50%;
+          border-bottom-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+        }
+        .texto {
+          padding: 0;
+          width: 85%;
+          padding: 10px 0;
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  #css {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: 70vh;
+    .card {
+      height: auto;
+      margin: 1%;
+      .content {
+        flex-direction: column-reverse;
+        .imagen {
+          width: 100%;
+          height: 50%;
+          border-bottom-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+        }
+        .texto {
+          padding: 0;
+          width: 85%;
+          padding: 10px 0;
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Seccion Banner */
+.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("bannerBack.jpeg");
+  background-position: center;
+  background-size: cover;
+  max-width: 100vw;
+  height: 200px;
+  color: white;
+}
+.banner h2 {
+  font-size: 2.3rem;
+  width: 30%;
+}
+.banner p {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 0;
+    h2 {
+      width: 90%;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+/* Seccion Sobre Nosotros */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  height: 70vh;
+  background-color: var(--violetaOscuro);
+}
+#about .about_container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#about .about_container .carta {
+  width: 40%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--violetaPrincipal);
+  border-radius: 20px;
+}
+#about .about_container .carta .arriba p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#about .about_container .carta .arriba h3 {
+  font-size: 3rem;
+  width: 70%;
+  color: var(--violetaInput);
+}
+#about .about_container .carta p {
+  color: white;
+  font-size: 1.2rem;
+}
+#about .about_container .carta .imagen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+#about .about_container .carta .imagen .img {
+  background-image: url("logoltc.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#about .about_container .carta .cuadros {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  place-items: center;
+}
+#about .about_container .carta .cuadros div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  color: white;
+  background-color: #361859;
+  border-radius: 10px;
+  padding: 10px;
+}
+#about .about_container .carta .cuadros div h4 {
+  font-size: 1.5rem;
+}
+#about .about_container .carta .cuadros div p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Seccion Sobre Dalto */
+#dalto {
+  background-color: var(--violetaPrincipal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  height: 90vh;
+}
+#dalto .content {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#dalto .content .imagen {
+  width: 40%;
+  height: 100%;
+}
+#dalto .content .imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#dalto .content .texto {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#dalto .content .texto h3 {
+  background: rgb(204, 158, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(204, 158, 255, 1) 0%,
+    rgba(168, 90, 255, 1) 30%,
+    rgba(120, 0, 255, 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  font-size: 3rem;
+}
+#dalto .content .texto p {
+  font-size: 1.5rem;
+  color: white;
+}
+#dalto .content .redes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+#dalto .content .redes i {
+  font-size: 2rem;
+  color: var(--violetaSecundario);
+}
+
+@media (max-width: 768px) {
+  #dalto {
+    height: auto;
+    padding: 20px 0;
+    .content {
+      flex-direction: column;
+      width: 90%;
+      .texto {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* Seccion Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  background-color: var(--violetaOscuro);
+  height: 45vh;
+  padding: 20px;
+}
+footer p {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  padding: 15px;
+}
+footer p span {
+  background: rgb(204, 158, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(204, 158, 255, 1) 0%,
+    rgba(168, 90, 255, 1) 30%,
+    rgba(120, 0, 255, 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  font-size: 1.8rem;
+}
+footer .principal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+footer .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+footer .content .logo {
+  background-color: red;
+  width: 20%;
+  height: 90%;
+}
+footer .content .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .content .links {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+footer .content .links .links_container,
+.cursos_container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .content .links .links_container h5,
+.cursos_container h5 {
+  color: #cc9eff;
+  font-size: 1.6rem;
+}
+footer .content .links .links_container ul,
+.cursos_container ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+footer .content .links .links_container ul li,
+.cursos_container ul li {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+footer .content .links .links_container ul li:hover,
+.cursos_container ul li:hover {
+  color: var(--violetaSecundario);
+}
+footer .content .subscribirse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  height: 90%;
+}
+footer .content .subscribirse .texto {
+  width: 100%;
+  text-align: center;
+}
+footer .content .subscribirse .texto p {
+  color: white;
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+footer .content .subscribirse form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 45%;
+}
+footer .content .subscribirse form input {
+  width: 60%;
+  height: 40%;
+  background-color: var(--violetaInput);
+  outline: none;
+  border: 2px solid whitesmoke;
+  border-radius: 12px;
+  padding: 10px 0px 10px 10px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+footer .content .subscribirse form input::placeholder {
+  color: white;
+}
+footer .content .subscribirse form input[type="submit"] {
+  background-color: var(--violetaOscuro);
+  padding: 0;
+  font-weight: 800;
+  transition: all 0.1s ease-in;
+  font-size: 1.3rem;
+  &:hover {
+    background-color: var(--violetaInput);
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 0;
+    height: auto;
+    .content {
+      flex-direction: column;
+      .texto {
+        width: 90%;
+        p {
+          width: 100%;
+          font-size: 1.2rem;
+        }
+      }
+      form {
+        width: 90%;
+      }
+    }
+  }
+}
