@@ -222,7 +222,7 @@ header .content nav ul li a:hover {
 #html .card .content .imagen img {
   width: 40%;
   height: 70%;
-  object-fit: cover;
+  object-fit: contain;
 }
 #html .card .content .imagen a {
   color: white;
@@ -354,7 +354,7 @@ header .content nav ul li a:hover {
 #css .card .content .imagen img {
   width: 40%;
   height: 70%;
-  object-fit: cover;
+  object-fit: contain;
 }
 #css .card .content .imagen a {
   color: white;
@@ -482,7 +482,7 @@ header .content nav ul li a:hover {
   width: 30%;
 }
 .banner p {
-  font-size: 2rem;
+  font-size: 6rem;
 }
 
 @media (max-width: 768px) {
